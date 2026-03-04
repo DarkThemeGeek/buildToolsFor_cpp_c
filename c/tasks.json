@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Create Build Folder",
+            "type": "shell",
+            "command": "if (!(Test-Path build)) { New-Item -ItemType Directory build }",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-std=c17",
+                "-g",
+                "${workspaceFolder}/*.c",
+                "-Iinclude",
+                "-Isrc",
+                "-o",
+                "build/app.exe"
+            ],
+            "dependsOn": "Create Build Folder",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+} 
