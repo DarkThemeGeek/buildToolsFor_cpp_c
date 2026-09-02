@@ -1,5 +1,5 @@
 # buildToolsFor_cpp_c <br/>
-basic build tools  for building and compiling cpp and c <br/>
+basic build tools setup for building and compiling cpp and c(Make and Cmake) <br/>
 commands: <br/>
     Makefile: make <br/>
     Cmake: cmake #(from folder were you want build to folder with the CMakeLists.txt)<br/>
